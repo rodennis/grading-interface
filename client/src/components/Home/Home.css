@@ -1,0 +1,28 @@
+.container {
+  height: 500px;
+  width: 60%;
+  background-color: white;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0.25px 1px 2.6px 1.95px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.search {
+  border: none;
+  text-align: left;
+  width: 95%;
+  padding: 10px;
+  padding-top: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+.search::placeholder {
+  font-size: 18px;
+  color: lightgray;
+}
+
+.search:focus {
+  outline: none;
+}

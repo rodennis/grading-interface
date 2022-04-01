@@ -1,0 +1,105 @@
+.card {
+  display: flex;
+  font-family: "Raleway";
+  border-bottom: 1px solid lightgray;
+}
+
+.left-side {
+  flex: 1;
+  margin-left: -90px;
+  padding-top: 25px;
+}
+
+.left-side img {
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  width: 100px;
+}
+
+.right-side {
+  flex: 2;
+  text-align: left;
+  margin-left: -80px;
+  display: flex;
+  overflow: auto;
+}
+
+.right-side h2 {
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  color: gray;
+}
+
+.plus {
+  background-color: transparent;
+  border-style: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.plus img {
+  width: 25px;
+}
+
+.minus {
+  background-color: transparent;
+  border-style: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.minus img {
+  width: 25px;
+}
+
+.info {
+  flex: 2;
+}
+
+.drop-down-button {
+  flex: 1;
+}
+.tests {
+  display: block;
+  margin: 20px 0px 20px;
+}
+
+.tests-hidden {
+  display: none;
+}
+
+.tag-input {
+  border: none;
+  margin: 10px 20px 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.tag-input:focus {
+  outline: none;
+}
+
+.tag {
+  background-color: lightgray;
+  color: black;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0px;
+  margin-left: 20px;
+  padding: 8px;
+}
+
+.tag-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
