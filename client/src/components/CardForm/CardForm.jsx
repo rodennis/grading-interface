@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 function CardForm({ index, setTags, tags, card }) {
-
   const [tagInput, setTagInput] = useState("");
 
   const addTag = (tag) => {
@@ -16,9 +15,9 @@ function CardForm({ index, setTags, tags, card }) {
         addTag({
           id: index,
           text: tagInput,
-          name: card.firstName
+          name: card.firstName,
         });
-        setTagInput('')
+        setTagInput("");
       }}
     >
       <input

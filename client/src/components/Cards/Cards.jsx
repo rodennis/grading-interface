@@ -11,43 +11,30 @@ function Cards({ data, searchField, tags, setTags, tagSearchField }) {
   const [tagName, setTagName] = useState("");
 
   const searchFunction = () => {
-    if(searchField !== null){
-    return data.filter((person) => {
-      return search.some((newPerson) => {
-        return (
-          person[newPerson]
-            .toString()
-            .toLowerCase()
-            .indexOf(searchField.toLowerCase()) > -1
-        );
+    if (searchField !== null) {
+      return data.filter((person) => {
+        return search.some((newPerson) => {
+          return (
+            person[newPerson]
+              .toString()
+              .toLowerCase()
+              .indexOf(searchField.toLowerCase()) > -1
+          );
+        });
       });
-    });
-  } else if (tagName !== null) {
-    return data.filter((person) => {
-      return search.some((newPerson) => {
-        return (
-          person[newPerson]
-            .toString()
-            .toLowerCase()
-            .indexOf(tagName.toLowerCase()) > -1
-        );
+    } else if (tagName !== null) {
+      return data.filter((person) => {
+        return search.some((newPerson) => {
+          return (
+            person[newPerson]
+              .toString()
+              .toLowerCase()
+              .indexOf(tagName.toLowerCase()) > -1
+          );
+        });
       });
-    });
-  } else return data
+    } else return data;
   };
-
-  // const tagFunction = () => {
-  //   return data.filter((person) => {
-  //     return search.some((newPerson) => {
-  //       return (
-  //         person[newPerson]
-  //           .toString()
-  //           .toLowerCase()
-  //           .indexOf(tagName.toLowerCase()) > -1
-  //       );
-  //     });
-  //   });
-  // };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const foundTags = () => {
@@ -64,8 +51,8 @@ function Cards({ data, searchField, tags, setTags, tagSearchField }) {
   };
 
   useEffect(() => {
-    if(!foundTags) return data;
-    else setTagName(foundTags()[0].name)
+    if (!foundTags) return data;
+    else setTagName(foundTags()[0].name);
   }, [foundTags]);
 
   return (

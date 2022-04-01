@@ -8,25 +8,25 @@ function Home() {
   const [data, setData] = useState([]);
   const [searchField, setSearchField] = useState("");
   const [tagSearchField, setTagSearchField] = useState("");
-  const [tags, setTags] = useState([{name: "test", text: 'test'}]);
+  const [tags, setTags] = useState([{ name: "test", text: "test" }]);
 
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get(url);
       setData(
-        res.data.students.map( person => {
-          const average = person.grades?.reduce(
-            (a, b) => parseInt(a, 10) + parseInt(b, 10)
-            ) / person.grades?.length
-            person["Average"] = average
-            person["tags"] = tags.filter(tag => {
-              return tag.name === person.firstName
-            })
-            return person
-          })
-          )
-        };
-        getData();
+        res.data.students.map((person) => {
+          const average =
+            person.grades?.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10)) /
+            person.grades?.length;
+          person["Average"] = average;
+          person["tags"] = tags.filter((tag) => {
+            return tag.name === person.firstName;
+          });
+          return person;
+        })
+      );
+    };
+    getData();
   }, [tags]);
 
   return (
